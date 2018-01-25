@@ -1,0 +1,12 @@
+{% for post in paginator.posts %}
+  {% include postpreview.html %}
+{% endfor %}
+<div>
+  {% if paginator.previous_page_path %}
+    <a href="{{ paginator.previous_page_path }}">Попередня</a>
+  {% endif %}
+  Сторінка {{ paginator.page }} / {{ paginator.total_pages }}
+  {% if paginator.next_page_path %}
+    <a href="{{ paginator.next_page_path }}">Наступна</a>
+  {% endif %}
+</div>
